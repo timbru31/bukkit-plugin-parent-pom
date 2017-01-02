@@ -1,0 +1,241 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.dustplanet</groupId>
+  <artifactId>bukkit-plugin</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Bukkit-Plugin-Pom</name>
+  <description>A Maven parent POM containing the default configuration to build Bukkit plugins</description>
+  <url>https://github.com/timbru31/bukkit-plugin-parent-pom1/</url>
+
+  <properties>
+    <plugin.name>Plugin Name</plugin.name>
+    <plugin.main>de.dustplanet.pluginMain</plugin.main>
+    <build.number>-b${BUILD_NUMBER}</build.number>
+    <jdk.version>1.7</jdk.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- dependency versions -->
+    <bukkit.version>1.11.2-R0.1-SNAPSHOT</bukkit.version>
+    <metrics.version>R8-SNAPSHOT</metrics.version>
+    <lombok.version>1.16.12</lombok.version>
+
+    <!-- plugin versions -->
+    <compiler.version>3.6.0</compiler.version>
+    <enforcer.version>1.4.1</enforcer.version>
+    <jxr.version>2.5</jxr.version>
+    <pmd.version>3.7</pmd.version>
+    <proguard.version>2.0.13</proguard.version>
+    <release.version>2.5.3</release.version>
+    <shade.version>2.4.3</shade.version>
+
+    <!-- plugin configuration -->
+    <enforcer.maven.version>[3.2,)</enforcer.maven.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>spigotmc-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+    </repository>
+    <repository>
+      <id>Plugin Metrics</id>
+      <url>https://repo.mcstats.org/content/repositories/public</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>bukkit</artifactId>
+      <version>${bukkit.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mcstats.bukkit</groupId>
+      <artifactId>metrics</artifactId>
+      <version>${metrics.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.bukkit</groupId>
+          <artifactId>bukkit</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+ <build>
+    <finalName>${plugin.name}</finalName>
+    <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>${enforcer.version}</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>{enforcer.maven.version}</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${compiler.version}</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+          <compilerArgument>-Xlint:all</compilerArgument>
+          <showWarnings>true</showWarnings>
+          <showDeprecation>true</showDeprecation>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${release.version}</version>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <targetPath>.</targetPath>
+        <filtering>true</filtering>
+        <directory>${basedir}/src/main/resources</directory>
+        <includes>
+          <include>plugin.yml</include>
+          <include>config.yml</include>
+          <include>localization.yml</include>
+        </includes>
+      </resource>
+      <resource>
+        <targetPath>.</targetPath>
+        <filtering>true</filtering>
+        <directory>${basedir}</directory>
+        <includes>
+          <include>README.md</include>
+          <include>LICENSE.md</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>${jxr.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${pmd.version}</version>
+        <configuration>
+          <targetJdk>${jdk.version}</targetJdk>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <profiles>
+    <profile>
+      <id>obfuscate</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.wvengen</groupId>
+            <artifactId>proguard-maven-plugin</artifactId>
+            <version>${proguard.version}</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>proguard</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <obfuscate>true</obfuscate>
+              <options>
+                <option>-dontshrink</option>
+                <option>-keepattributes *Annotation*</option>
+                <option>-keep class ${plugin.main}</option>
+                <option>-keep class org.json.HTTPSTokener</option>
+                <option>-keep class org.json.HTTPTokenException</option>
+                <option>-keep class org.json.JSONReader</option>
+                <option>-keep class org.json.JSONBoolean</option>
+              </options>
+              <libs>
+                <lib>${java.home}/lib/rt.jar</lib>
+              </libs>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>metrics</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>${shade.version}</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>shade</goal>
+                </goals>
+                <configuration>
+                  <artifactSet>
+                    <includes>
+                      <include>org.hsqldb:hsqldb</include>
+                      <include>org.json:json</include>
+                      <include>org.mcstats.bukkit:metrics</include>
+                      <include>org.mongodb:mongo-java-driver</include>
+                    </includes>
+                  </artifactSet>
+                  <finalName>${plugin.name}</finalName>
+                  <relocations>
+                    <relocation>
+                      <pattern>org.mcstats</pattern>
+                      <shadedPattern>${plugin.main}</shadedPattern>
+                    </relocation>
+                  </relocations>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <scm>
+    <url>https://github.com/timbru31/${plugin.name}</url>
+    <connection>scm:git:git://github.com/timbru31/${plugin.name}.git</connection>
+    <developerConnection>scm:git:git@github.com:timbru31/${plugin.name}.git</developerConnection>
+  </scm>
+
+  <ciManagement>
+    <url>https://ci.dustplanet.de/job/${plugin.name}</url>
+    <system>jenkins</system>
+  </ciManagement>
+</project>
