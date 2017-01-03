@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -22,15 +22,22 @@
     <lombok.version>1.16.12</lombok.version>
 
     <!-- plugin versions -->
+    <checkstyle.plugin.version>2.17</checkstyle.plugin.version>
+    <clean.version>3.0.0</clean.version>
     <compiler.version>3.6.0</compiler.version>
     <enforcer.version>1.4.1</enforcer.version>
+    <jar.version>3.0.2</jar.version>
+    <javadoc.version>2.1.04</javadoc.version>
     <jxr.version>2.5</jxr.version>
     <pmd.version>3.7</pmd.version>
     <proguard.version>2.0.13</proguard.version>
     <release.version>2.5.3</release.version>
+    <resources.version>3.0.2</resources.version>
     <shade.version>2.4.3</shade.version>
 
     <!-- plugin configuration -->
+    <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
+    <checkstyle.version>7.4</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
   </properties>
 
@@ -110,6 +117,46 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <version>${release.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${release.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>${clean.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${resources.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>${jar.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${javadoc.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${checkstyle.plugin.version}</version>
+        <dependencies>
+          <dependency>
+          <groupId>com.puppycrawl.tools</groupId>
+          <artifactId>checkstyle</artifactId>
+          <version>${checkstyle.version}</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <configLocation>${checkstyle.location}</configLocation>
+        </configuration>
       </plugin>
     </plugins>
     <resources>
