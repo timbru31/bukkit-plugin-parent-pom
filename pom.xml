@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -27,7 +27,7 @@
     <compiler.version>3.6.0</compiler.version>
     <enforcer.version>1.4.1</enforcer.version>
     <jar.version>3.0.2</jar.version>
-    <javadoc.version>2.1.04</javadoc.version>
+    <javadoc.version>2.10.4</javadoc.version>
     <jxr.version>2.5</jxr.version>
     <pmd.version>3.7</pmd.version>
     <proguard.version>2.0.13</proguard.version>
@@ -112,11 +112,6 @@
           <showWarnings>true</showWarnings>
           <showDeprecation>true</showDeprecation>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>${release.version}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
