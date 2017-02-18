@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -12,6 +12,7 @@
   <properties>
     <plugin.name>Plugin Name</plugin.name>
     <plugin.main>de.dustplanet.pluginMain</plugin.main>
+    <plugin.package>de.dustplanet</plugin.package>
     <build.number>-b${BUILD_NUMBER}</build.number>
     <jdk.version>1.7</jdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,6 +41,7 @@
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
     <checkstyle.version>7.4</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
+    <obfuscate.options>-keepattributes *Annotation*</obfuscate.options>
   </properties>
 
   <repositories>
@@ -198,6 +200,38 @@
 
   <profiles>
     <profile>
+      <id>obfuscate</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.wvengen</groupId>
+            <artifactId>proguard-maven-plugin</artifactId>
+            <version>${proguard.version}</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>proguard</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <obfuscate>true</obfuscate>
+              <options>
+                <option>-dontshrink</option>
+                <option>-keepattributes *Annotation*</option>
+                <option>-keep class ${plugin.main}</option>
+                <option>${obfuscate.options}</option>
+              </options>
+              <libs>
+                <lib>${java.home}/lib/rt.jar</lib>
+              </libs>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
       <id>metrics</id>
       <build>
         <plugins>
@@ -218,7 +252,7 @@
               <relocations>
                 <relocation>
                   <pattern>org.bstats</pattern>
-                  <shadedPattern>${plugin.main}</shadedPattern>
+                  <shadedPattern>${plugin.package}</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
