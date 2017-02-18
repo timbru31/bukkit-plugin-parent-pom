@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>0.1.5-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -48,8 +48,8 @@
       <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
     </repository>
     <repository>
-      <id>Plugin Metrics</id>
-      <url>https://repo.mcstats.org/content/repositories/public</url>
+      <id>bstats-repo</id>
+      <url>https://repo.bstats.org/content/groups/public/</url>
     </repository>
   </repositories>
 
@@ -60,15 +60,9 @@
       <version>${bukkit.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.mcstats.bukkit</groupId>
-      <artifactId>metrics</artifactId>
-      <version>${metrics.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.bukkit</groupId>
-          <artifactId>bukkit</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.bstats</groupId>
+      <artifactId>bstats-bukkit</artifactId>
+      <version>LATEST</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -211,29 +205,29 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-shade-plugin</artifactId>
             <version>${shade.version}</version>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>org.bstats:*</include>
+                  <include>org.hsqldb:hsqldb</include>
+                  <include>org.json:json</include>
+                  <include>org.mongodb:mongo-java-driver</include>
+                </includes>
+              </artifactSet>
+              <finalName>${plugin.name}</finalName>
+              <relocations>
+                <relocation>
+                  <pattern>org.bstats</pattern>
+                  <shadedPattern>${plugin.main}</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
             <executions>
               <execution>
                 <phase>package</phase>
                 <goals>
                   <goal>shade</goal>
                 </goals>
-                <configuration>
-                  <artifactSet>
-                    <includes>
-                      <include>org.hsqldb:hsqldb</include>
-                      <include>org.json:json</include>
-                      <include>org.mcstats.bukkit:metrics</include>
-                      <include>org.mongodb:mongo-java-driver</include>
-                    </includes>
-                  </artifactSet>
-                  <finalName>${plugin.name}</finalName>
-                  <relocations>
-                    <relocation>
-                      <pattern>org.mcstats</pattern>
-                      <shadedPattern>${plugin.main}</shadedPattern>
-                    </relocation>
-                  </relocations>
-                </configuration>
               </execution>
             </executions>
           </plugin>
