@@ -2,16 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>1.2.1-SNAPSHOT</version>
+  <version>1.2.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
   <description>A Maven parent POM containing the default configuration to build Bukkit plugins</description>
   <url>https://github.com/timbru31/bukkit-plugin-parent-pom1/</url>
-
-  <prerequisites>
-    <maven>3.0</maven>
-  </prerequisites>
 
   <properties>
     <plugin.name>Plugin Name</plugin.name>
@@ -31,21 +27,22 @@
     <!-- plugin versions -->
     <checkstyle.plugin.version>2.17</checkstyle.plugin.version>
     <clean.version>3.0.0</clean.version>
-    <compiler.version>3.6.0</compiler.version>
+    <compiler.version>3.6.1</compiler.version>
     <deploy.version>2.8.2</deploy.version>
     <enforcer.version>1.4.1</enforcer.version>
     <jar.version>3.0.2</jar.version>
     <javadoc.version>2.10.4</javadoc.version>
     <jxr.version>2.5</jxr.version>
     <pmd.version>3.7</pmd.version>
-    <proguard.version>2.0.13</proguard.version>
+    <proguard.version>2.0.14</proguard.version>
     <release.version>2.5.3</release.version>
     <resources.version>3.0.2</resources.version>
-    <shade.version>2.4.3</shade.version>
+    <shade.version>3.0.0</shade.version>
+    <versions.version>2.3</versions.version>
 
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
-    <checkstyle.version>7.4</checkstyle.version>
+    <checkstyle.version>7.6</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
     <obfuscate.options>-keepattributes *Annotation*</obfuscate.options>
   </properties>
@@ -97,6 +94,11 @@
     <finalName>${plugin.name}</finalName>
     <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>${versions.version}</version>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
