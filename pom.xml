@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>1.2.4-SNAPSHOT</version>
+  <version>1.2.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -268,6 +268,7 @@
                   <include>org.mongodb:mongo-java-driver</include>
                 </includes>
               </artifactSet>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
               <finalName>${plugin.name}</finalName>
               <relocations>
                 <relocation>
