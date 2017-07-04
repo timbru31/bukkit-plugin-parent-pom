@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>1.2.12-SNAPSHOT</version>
+  <version>2.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -42,7 +42,7 @@
 
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
-    <checkstyle.version>7.8.2</checkstyle.version>
+    <checkstyle.version>8.0</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
     <obfuscate.options>-keepattributes *Annotation*</obfuscate.options>
   </properties>
