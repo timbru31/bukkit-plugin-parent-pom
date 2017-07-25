@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>3.0.0-SNAPSHOT</version>
+  <version>3.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -272,7 +272,7 @@
               <finalName>${plugin.name}</finalName>
               <relocations>
                 <relocation>
-                  <pattern>org.bstats</pattern>
+                  <pattern>org.bstats.bukkit</pattern>
                   <shadedPattern>${plugin.package}</shadedPattern>
                 </relocation>
               </relocations>
