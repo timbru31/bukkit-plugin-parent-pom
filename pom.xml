@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>3.5.1-SNAPSHOT</version>
+  <version>4.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -14,7 +14,7 @@
     <plugin.main>de.dustplanet.pluginMain</plugin.main>
     <plugin.package>de.dustplanet</plugin.package>
     <build.number>-b${BUILD_NUMBER}</build.number>
-    <jdk.version>1.7</jdk.version>
+    <jdk.version>1.8</jdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- dependency versions -->
@@ -38,11 +38,11 @@
     <release.version>2.5.3</release.version>
     <resources.version>3.0.2</resources.version>
     <shade.version>3.1.0</shade.version>
-    <versions.version>2.4</versions.version>
+    <versions.version>2.5</versions.version>
 
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
-    <checkstyle.version>8.2</checkstyle.version>
+    <checkstyle.version>8.3</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
     <obfuscate.options>-keepattributes *Annotation*</obfuscate.options>
   </properties>
