@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>4.1.1-SNAPSHOT</version>
+  <version>4.1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -276,8 +276,6 @@
                   <include>org.bstats:*</include>
                   <include>org.hsqldb:hsqldb</include>
                   <include>org.json:json</include>
-                  <include>org.jetbrains:*:*</include>
-                  <include>org.jetbrains.kotlin:kotlin-stdlib:jar:*</include>
                   <include>org.mongodb:mongo-java-driver</include>
                 </includes>
               </artifactSet>
@@ -328,6 +326,39 @@
                 <id>test-compile</id>
                 <goals>
                   <goal>test-compile</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>${shade.version}</version>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>org.bstats:*</include>
+                  <include>org.hsqldb:hsqldb</include>
+                  <include>org.json:json</include>
+                  <include>org.jetbrains:*:*</include>
+                  <include>org.jetbrains.kotlin:kotlin-stdlib:jar:*</include>
+                  <include>org.mongodb:mongo-java-driver</include>
+                </includes>
+              </artifactSet>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <finalName>${plugin.name}</finalName>
+              <relocations>
+                <relocation>
+                  <pattern>org.bstats.bukkit</pattern>
+                  <shadedPattern>${plugin.package}</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>shade</goal>
                 </goals>
               </execution>
             </executions>
