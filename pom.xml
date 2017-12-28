@@ -369,14 +369,14 @@
   </profiles>
 
   <scm>
-    <url>https://github.com/timbru31/${plugin.name}</url>
-    <connection>scm:git:git://github.com/timbru31/${plugin.name}.git</connection>
-    <developerConnection>scm:git:git@github.com:timbru31/${plugin.name}.git</developerConnection>
+    <url>https://github.com/timbru31/bukkit-plugin-parent-pom</url>
+    <connection>scm:git:git://github.com/timbru31/bukkit-plugin-parent-pom.git</connection>
+    <developerConnection>scm:git:git@github.com:timbru31/bukkit-plugin-parent-pom.git</developerConnection>
     <tag>master</tag>
   </scm>
 
   <ciManagement>
-    <url>https://ci.dustplanet.de/job/${plugin.name}</url>
+    <url>https://ci.dustplanet.de/job/bukkit-plugin-parent-pom</url>
     <system>jenkins</system>
   </ciManagement>
 </project>
