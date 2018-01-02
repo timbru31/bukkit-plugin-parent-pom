@@ -32,7 +32,7 @@
     <deploy.version>2.8.2</deploy.version>
     <enforcer.version>3.0.0-M1</enforcer.version>
     <jar.version>3.0.2</jar.version>
-    <javadoc.version>2.10.4</javadoc.version>
+    <javadoc.version>3.0.0</javadoc.version>
     <jxr.version>2.5</jxr.version>
     <pmd.version>3.8</pmd.version>
     <proguard.version>2.0.14</proguard.version>
@@ -43,7 +43,7 @@
 
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
-    <checkstyle.version>8.3</checkstyle.version>
+    <checkstyle.version>8.5</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
     <obfuscate.options>-keepattributes *Annotation*</obfuscate.options>
 
