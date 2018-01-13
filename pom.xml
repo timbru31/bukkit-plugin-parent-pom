@@ -22,7 +22,7 @@
     <bukkit.version>1.12.2-R0.1-SNAPSHOT</bukkit.version>
     <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
     <kotlin.version>1.2.10</kotlin.version>
-    <lombok.version>1.16.18</lombok.version>
+    <lombok.version>1.16.20</lombok.version>
     <metrics.version>R8-SNAPSHOT</metrics.version>
 
     <!-- plugin versions -->
@@ -43,7 +43,7 @@
 
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
-    <checkstyle.version>8.5</checkstyle.version>
+    <checkstyle.version>8.7</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
     <obfuscate.options>-keepattributes *Annotation*</obfuscate.options>
 
