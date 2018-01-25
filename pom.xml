@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>4.1.3-SNAPSHOT</version>
+  <version>5.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -35,7 +35,6 @@
     <javadoc.version>3.0.0</javadoc.version>
     <jxr.version>2.5</jxr.version>
     <pmd.version>3.8</pmd.version>
-    <proguard.version>2.0.14</proguard.version>
     <release.version>2.5.3</release.version>
     <resources.version>3.0.2</resources.version>
     <shade.version>3.1.0</shade.version>
@@ -45,7 +44,6 @@
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
     <checkstyle.version>8.7</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
-    <obfuscate.options>-keepattributes *Annotation*</obfuscate.options>
 
     <!-- build configuration -->
     <src.dir>${basedir}/src/main/java</src.dir>
@@ -230,38 +228,6 @@
   </reporting>
 
   <profiles>
-    <profile>
-      <id>obfuscate</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>com.github.wvengen</groupId>
-            <artifactId>proguard-maven-plugin</artifactId>
-            <version>${proguard.version}</version>
-            <executions>
-              <execution>
-                <phase>package</phase>
-                <goals>
-                  <goal>proguard</goal>
-                </goals>
-              </execution>
-            </executions>
-            <configuration>
-              <obfuscate>true</obfuscate>
-              <options>
-                <option>-dontshrink</option>
-                <option>-keepattributes *Annotation*</option>
-                <option>-keep class ${plugin.main}</option>
-                <option>${obfuscate.options}</option>
-              </options>
-              <libs>
-                <lib>${java.home}/lib/rt.jar</lib>
-              </libs>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
     <profile>
       <id>metrics</id>
       <build>
