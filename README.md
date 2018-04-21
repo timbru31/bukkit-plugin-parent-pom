@@ -11,7 +11,6 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 
 * Bukkit
 * bStats
-* MCStats (*will be removed soon*)
 * Kotlin
 * Lombok
 * FindBugs Annotations
@@ -26,7 +25,6 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 
 * metrics - this profile shades bStats into the plugin
 * kotlin - this profile adds the necessary configuration and shading for Kotlin usage
-* obfuscate (*deprecated*) - enables ProGuard obfuscation
 
 ## Configuration
 

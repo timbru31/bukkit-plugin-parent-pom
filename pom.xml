@@ -23,7 +23,6 @@
     <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
     <kotlin.version>1.2.40</kotlin.version>
     <lombok.version>1.16.20</lombok.version>
-    <metrics.version>R8-SNAPSHOT</metrics.version>
 
     <!-- plugin versions -->
     <checkstyle.plugin.version>3.0.0</checkstyle.plugin.version>
