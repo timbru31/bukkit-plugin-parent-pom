@@ -21,7 +21,7 @@
     <bstats.version>1.2</bstats.version>
     <bukkit.version>1.12.2-R0.1-SNAPSHOT</bukkit.version>
     <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
-    <kotlin.version>1.2.40</kotlin.version>
+    <kotlin.version>1.2.41</kotlin.version>
     <lombok.version>1.16.20</lombok.version>
 
     <!-- plugin versions -->
