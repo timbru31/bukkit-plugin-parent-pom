@@ -46,7 +46,7 @@
 
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
-    <checkstyle.version>8.10</checkstyle.version>
+    <checkstyle.version>8.10.1</checkstyle.version>
     <enforcer.maven.version>[3.2,)</enforcer.maven.version>
 
     <!-- build configuration -->
