@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>5.3.1-SNAPSHOT</version>
+  <version>5.4.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -35,6 +35,8 @@
     <compiler.version>3.7.0</compiler.version>
     <deploy.version>2.8.2</deploy.version>
     <enforcer.version>3.0.0-M2</enforcer.version>
+    <fb.contrib.version>7.4.2</fb.contrib.version>
+    <findsecbugs.version>1.8.0</findsecbugs.version>
     <jar.version>3.1.0</jar.version>
     <javadoc.version>3.0.1</javadoc.version>
     <junit.surefire.provider.version>1.2.0</junit.surefire.provider.version>
@@ -43,9 +45,10 @@
     <release.version>2.5.3</release.version>
     <resources.version>3.1.0</resources.version>
     <shade.version>3.1.1</shade.version>
+    <spotbugs.maven.version>3.1.5</spotbugs.maven.version>
     <surefire.version>2.22.0</surefire.version>
     <versions.version>2.5</versions.version>
-
+    
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
     <checkstyle.version>8.11</checkstyle.version>
@@ -238,6 +241,28 @@
             <version>${junit.surefire.provider.version}</version>
           </dependency>
         </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>${spotbugs.maven.version}</version>
+        <configuration>
+          <effort>Max</effort>
+          <threshold>Low</threshold>
+          <failOnError>true</failOnError>
+          <plugins>
+            <plugin>
+              <groupId>com.h3xstream.findsecbugs</groupId>
+              <artifactId>findsecbugs-plugin</artifactId>
+              <version>${findsecbugs.version}</version>
+            </plugin>
+            <plugin>
+              <groupId>com.mebigfatguy.fb-contrib</groupId>
+              <artifactId>fb-contrib</artifactId>
+              <version>${fb.contrib.version}</version>
+            </plugin>
+          </plugins>
+        </configuration>
       </plugin>
     </plugins>
     <resources>
