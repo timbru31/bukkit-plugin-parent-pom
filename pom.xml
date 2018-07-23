@@ -35,7 +35,7 @@
     <compiler.version>3.7.0</compiler.version>
     <deploy.version>2.8.2</deploy.version>
     <enforcer.version>3.0.0-M2</enforcer.version>
-    <fb.contrib.version>7.4.2</fb.contrib.version>
+    <fb.contrib.version>7.4.3</fb.contrib.version>
     <findsecbugs.version>1.8.0</findsecbugs.version>
     <jar.version>3.1.0</jar.version>
     <javadoc.version>3.0.1</javadoc.version>
