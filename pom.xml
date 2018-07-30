@@ -32,7 +32,7 @@
     <!-- plugin versions -->
     <checkstyle.plugin.version>3.0.0</checkstyle.plugin.version>
     <clean.version>3.1.0</clean.version>
-    <compiler.version>3.7.0</compiler.version>
+    <compiler.version>3.8.0</compiler.version>
     <deploy.version>2.8.2</deploy.version>
     <enforcer.version>3.0.0-M2</enforcer.version>
     <fb.contrib.version>7.4.3</fb.contrib.version>
