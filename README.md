@@ -20,7 +20,6 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 
 * Checkstyle
 * PMD
-* ProGuard
 
 ### Profiles
 
@@ -52,7 +51,7 @@ Include the following in your `pom.xml`:
   <parent>
     <groupId>de.dustplanet</groupId>
     <artifactId>bukkit-plugin</artifactId>
-    <version>4.1.2</version>
+    <version>5.4.1</version>
     <relativePath />
   </parent>
 
