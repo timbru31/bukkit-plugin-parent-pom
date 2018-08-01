@@ -1,8 +1,8 @@
 bukkit-plugin-parent-pom
+===
 
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=timbru31/bukkit-plugin-parent-pom)](https://dependabot.com)
 [![Known Vulnerabilities](https://snyk.io/test/github/timbru31/bukkit-plugin-parent-pom/badge.svg)](https://snyk.io/test/github/timbru31/bukkit-plugin-parent-pom)
-===
 
 A maven parent POM for all my Bukkit/Spigot plugins.
 
