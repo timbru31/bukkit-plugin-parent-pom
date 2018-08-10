@@ -283,6 +283,7 @@
         <includes>
           <include>README.md</include>
           <include>LICENSE.md</include>
+          <include>LICENSE</include>
         </includes>
       </resource>
     </resources>
