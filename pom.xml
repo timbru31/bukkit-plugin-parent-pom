@@ -45,7 +45,7 @@
     <release.version>2.5.3</release.version>
     <resources.version>3.1.0</resources.version>
     <shade.version>3.2.0</shade.version>
-    <spotbugs.maven.version>3.1.7</spotbugs.maven.version>
+    <spotbugs.maven.version>3.1.8</spotbugs.maven.version>
     <surefire.version>2.22.1</surefire.version>
     <versions.version>2.7</versions.version>
     
