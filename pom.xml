@@ -24,7 +24,7 @@
     <hoverfly.version>0.11.1</hoverfly.version>
     <junit.version>5.3.1</junit.version>
     <junit.extensions.version>2.3.0</junit.extensions.version>
-    <junit.launcher.version>1.3.1</junit.launcher.version>
+    <junit.launcher.version>1.3.2</junit.launcher.version>
     <kotlin.version>1.3.10</kotlin.version>
     <lombok.version>1.18.4</lombok.version>
     <mockito.version>2.23.4</mockito.version>
