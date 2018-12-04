@@ -7,7 +7,7 @@
 
   <name>Bukkit-Plugin-Pom</name>
   <description>A Maven parent POM containing the default configuration to build Bukkit plugins</description>
-  <url>https://github.com/timbru31/bukkit-plugin-parent-pom1/</url>
+  <url>https://github.com/timbru31/bukkit-plugin-parent-pom</url>
 
   <properties>
     <plugin.name>Plugin Name</plugin.name>
