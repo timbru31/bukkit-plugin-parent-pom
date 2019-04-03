@@ -15,11 +15,15 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 * Kotlin
 * Lombok
 * FindBugs Annotations
+* JUnit 5
+* Mockito
+* Hoverfly
 
 ### Plugins
 
 * Checkstyle
 * PMD
+* SpotBugs (+ Find Security Bugs & fb-contrib)
 
 ### Profiles
 
@@ -51,7 +55,7 @@ Include the following in your `pom.xml`:
   <parent>
     <groupId>de.dustplanet</groupId>
     <artifactId>bukkit-plugin</artifactId>
-    <version>5.4.1</version>
+    <version>5.4.10</version>
     <relativePath />
   </parent>
 
