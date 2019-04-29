@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>5.4.12-SNAPSHOT</version>
+  <version>5.5.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -19,7 +19,7 @@
 
     <!-- dependency versions -->
     <bstats.version>1.4</bstats.version>
-    <bukkit.version>1.13.2-R0.1-SNAPSHOT</bukkit.version>
+    <bukkit.version>1.14-R0.1-SNAPSHOT</bukkit.version>
     <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
     <hoverfly.version>0.11.5</hoverfly.version>
     <junit.version>5.4.2</junit.version>
