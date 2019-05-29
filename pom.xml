@@ -27,7 +27,7 @@
     <junit.launcher.version>1.4.2</junit.launcher.version>
     <kotlin.version>1.3.31</kotlin.version>
     <lombok.version>1.18.8</lombok.version>
-    <mockito.version>2.27.0</mockito.version>
+    <mockito.version>2.28.1</mockito.version>
 
     <!-- plugin versions -->
     <checkstyle.plugin.version>3.1.0</checkstyle.plugin.version>
