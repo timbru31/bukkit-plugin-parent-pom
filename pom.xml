@@ -18,8 +18,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- dependency versions -->
-    <bstats.version>1.4</bstats.version>
-    <bukkit.version>1.14-R0.1-SNAPSHOT</bukkit.version>
+    <bstats.version>1.5</bstats.version>
+    <bukkit.version>1.14.2-R0.1-SNAPSHOT</bukkit.version>
     <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
     <hoverfly.version>0.12.0</hoverfly.version>
     <junit.version>5.4.2</junit.version>
