@@ -22,7 +22,7 @@
     <bukkit.version>1.14.2-R0.1-SNAPSHOT</bukkit.version>
     <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
     <hoverfly.version>0.12.0</hoverfly.version>
-    <junit.version>5.4.2</junit.version>
+    <junit.version>5.5.0</junit.version>
     <junit.extensions.version>2.3.0</junit.extensions.version>
     <junit.launcher.version>1.4.2</junit.launcher.version>
     <kotlin.version>1.3.40</kotlin.version>
