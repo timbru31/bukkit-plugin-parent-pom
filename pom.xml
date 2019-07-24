@@ -21,7 +21,7 @@
     <bstats.version>1.5</bstats.version>
     <bukkit.version>1.14.2-R0.1-SNAPSHOT</bukkit.version>
     <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
-    <hoverfly.version>0.12.0</hoverfly.version>
+    <hoverfly.version>0.12.1</hoverfly.version>
     <junit.version>5.5.1</junit.version>
     <junit.extensions.version>2.3.0</junit.extensions.version>
     <junit.launcher.version>1.5.1</junit.launcher.version>
