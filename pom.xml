@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
@@ -48,7 +49,7 @@
     <spotbugs.maven.version>3.1.12.2</spotbugs.maven.version>
     <surefire.version>2.22.2</surefire.version>
     <versions.version>2.7</versions.version>
-    
+
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
     <checkstyle.version>8.28</checkstyle.version>
@@ -101,9 +102,9 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-        <groupId>org.jetbrains.kotlin</groupId>
-        <artifactId>kotlin-stdlib</artifactId>
-        <version>${kotlin.version}</version>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>${kotlin.version}</version>
     </dependency>
     <dependency>
       <groupId>io.specto</groupId>
@@ -119,20 +120,8 @@
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
+      <artifactId>junit-jupiter</artifactId>
       <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-launcher</artifactId>
-      <version>${junit.launcher.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -143,7 +132,7 @@
     </dependency>
   </dependencies>
 
- <build>
+  <build>
     <finalName>${plugin.name}</finalName>
     <sourceDirectory>${src.dir}</sourceDirectory>
     <testSourceDirectory>${test.dir}</testSourceDirectory>
@@ -216,9 +205,9 @@
         <version>${checkstyle.plugin.version}</version>
         <dependencies>
           <dependency>
-          <groupId>com.puppycrawl.tools</groupId>
-          <artifactId>checkstyle</artifactId>
-          <version>${checkstyle.version}</version>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>${checkstyle.version}</version>
           </dependency>
         </dependencies>
         <configuration>
