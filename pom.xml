@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>5.5.4-SNAPSHOT</version>
+  <version>5.5.4</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -416,7 +415,7 @@
     <url>https://github.com/timbru31/bukkit-plugin-parent-pom</url>
     <connection>scm:git:git://github.com/timbru31/bukkit-plugin-parent-pom.git</connection>
     <developerConnection>scm:git:git@github.com:timbru31/bukkit-plugin-parent-pom.git</developerConnection>
-    <tag>master</tag>
+    <tag>bukkit-plugin-5.5.4</tag>
   </scm>
 
   <ciManagement>
