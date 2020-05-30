@@ -155,9 +155,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>net.gravitydevelopment.updater</groupId>
-        <artifactId>updater</artifactId>
-        <version>${updater.version}</version>
+      <groupId>net.gravitydevelopment.updater</groupId>
+      <artifactId>updater</artifactId>
+      <version>${updater.version}</version>
     </dependency>
   </dependencies>
 
