@@ -20,7 +20,7 @@
     <!-- dependency versions -->
     <bstats.version>1.7</bstats.version>
     <bukkit.version>1.15.2-R0.1-SNAPSHOT</bukkit.version>
-    <findbugs.annotations.version>3.0.1u2</findbugs.annotations.version>
+    <spotbugs.annotations.version>4.0.3</spotbugs.annotations.version>
     <hoverfly.version>0.12.3</hoverfly.version>
     <junit.version>5.6.2</junit.version>
     <junit.extensions.version>2.4.0</junit.extensions.version>
@@ -103,9 +103,9 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.google.code.findbugs</groupId>
-      <artifactId>annotations</artifactId>
-      <version>${findbugs.annotations.version}</version>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs-annotations</artifactId>
+      <version>${spotbugs.annotations.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

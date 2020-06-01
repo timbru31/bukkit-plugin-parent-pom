@@ -15,10 +15,11 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 * bStats
 * Kotlin
 * Lombok
-* FindBugs Annotations
+* SpotBugs Annotations
 * JUnit 5
 * Mockito
 * Hoverfly
+* updater (https://github.com/timbru31/updater)
 
 ### Plugins
 
