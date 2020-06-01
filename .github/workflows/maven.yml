@@ -1,0 +1,15 @@
+name: Run XML linting
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run XML linting
+      run: |
+        sudo apt update -qq && sudo apt install -qq libxml2-utils
+        xmllint pom.xml
