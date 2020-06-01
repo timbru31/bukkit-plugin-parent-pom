@@ -313,6 +313,9 @@
         <version>${pmd.version}</version>
         <configuration>
           <targetJdk>${jdk.version}</targetJdk>
+          <rulesets>
+            <ruleset>https://dustplanet.de/pmd.xml</ruleset>
+          </rulesets>
         </configuration>
       </plugin>
     </plugins>
