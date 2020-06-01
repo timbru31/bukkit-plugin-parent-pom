@@ -45,6 +45,7 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 * JDK Version (*jdk.version*), default is *1.8*
 * Enforced Maven version (*enforcer.maven.version*), default is *[3,2)*
 * Checkstyle ruleset (*checkstyle.location*), default is *https://dustplanet.de/checkstyle.xml*
+* PMD ruleset (*pmd.location*), default is *https://dustplanet.de/pmd.xml*
 
 For further properties, please take a look into the *properties* section of this `pom.xml`.
 
@@ -56,7 +57,7 @@ Include the following in your `pom.xml`:
   <parent>
     <groupId>de.dustplanet</groupId>
     <artifactId>bukkit-plugin</artifactId>
-    <version>5.4.10</version>
+    <version>5.8.0/version>
     <relativePath />
   </parent>
 
