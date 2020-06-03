@@ -335,9 +335,44 @@
               <artifactSet>
                 <includes>
                   <include>org.bstats:*</include>
+                  <include>org.mongodb:mongo-java-driver</include>
                   <include>net.gravitydevelopment.updater:updater</include>
                   <include>com.vdurmont:semver4j</include>
-                  <include>org.json:json</include>
+                </includes>
+              </artifactSet>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <finalName>${plugin.name}</finalName>
+              <relocations>
+                <relocation>
+                  <pattern>org.bstats.bukkit</pattern>
+                  <shadedPattern>${plugin.package}</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>shade</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>metrics-no-updater</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>${shade.version}</version>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>org.bstats:*</include>
                   <include>org.mongodb:mongo-java-driver</include>
                 </includes>
               </artifactSet>
@@ -400,11 +435,75 @@
               <artifactSet>
                 <includes>
                   <include>org.bstats:*</include>
-                  <include>org.hsqldb:hsqldb</include>
-                  <include>org.json:json</include>
+                  <include>org.mongodb:mongo-java-driver</include>
+                  <include>net.gravitydevelopment.updater:updater</include>
+                  <include>com.vdurmont:semver4j</include>
                   <include>org.jetbrains:*:*</include>
                   <include>org.jetbrains.kotlin:kotlin-stdlib:jar:*</include>
+                </includes>
+              </artifactSet>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <finalName>${plugin.name}</finalName>
+              <relocations>
+                <relocation>
+                  <pattern>org.bstats.bukkit</pattern>
+                  <shadedPattern>${plugin.package}</shadedPattern>
+                </relocation>
+              </relocations>
+              <executions>
+                <execution>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>shade</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>kotlin-no-updater</id>
+      <properties>
+        <src.dir>${project.basedir}/src/main/kotlin</src.dir>
+        <test.dir>${project.basedir}/src/test/kotlin</test.dir>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>kotlin-maven-plugin</artifactId>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <version>${kotlin.version}</version>
+            <configuration>
+              <jvmTarget>${jdk.version}</jvmTarget>
+            </configuration>
+            <executions>
+              <execution>
+                <id>compile</id>
+                <goals>
+                  <goal>compile</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>test-compile</id>
+                <goals>
+                  <goal>test-compile</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>${shade.version}</version>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>org.bstats:*</include>
                   <include>org.mongodb:mongo-java-driver</include>
+                  <include>org.jetbrains:*:*</include>
+                  <include>org.jetbrains.kotlin:kotlin-stdlib:jar:*</include>
                 </includes>
               </artifactSet>
               <createDependencyReducedPom>false</createDependencyReducedPom>
