@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dustplanet</groupId>
   <artifactId>bukkit-plugin</artifactId>
-  <version>5.9.1</version>
+  <version>5.9.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Bukkit-Plugin-Pom</name>
@@ -533,7 +533,7 @@
     <url>https://github.com/timbru31/bukkit-plugin-parent-pom</url>
     <connection>scm:git:git://github.com/timbru31/bukkit-plugin-parent-pom.git</connection>
     <developerConnection>scm:git:git@github.com:timbru31/bukkit-plugin-parent-pom.git</developerConnection>
-    <tag>bukkit-plugin-5.9.1</tag>
+    <tag>master</tag>
   </scm>
 
   <ciManagement>
