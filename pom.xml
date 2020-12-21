@@ -19,7 +19,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- dependency versions -->
-    <bstats.version>1.7</bstats.version>
+    <bstats.version>1.8</bstats.version>
     <spigot.version>1.16.4-R0.1-SNAPSHOT</spigot.version>
     <spotbugs.annotations.version>4.2.0</spotbugs.annotations.version>
     <hoverfly.version>0.14.0</hoverfly.version>
