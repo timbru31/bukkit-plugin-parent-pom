@@ -382,8 +382,8 @@
               <finalName>${plugin.name}</finalName>
               <relocations>
                 <relocation>
-                  <pattern>org.bstats.bukkit</pattern>
-                  <shadedPattern>${plugin.package}</shadedPattern>
+                  <pattern>org.bstats</pattern>
+                  <shadedPattern>${plugin.package}.util.stats</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
@@ -448,8 +448,8 @@
               <finalName>${plugin.name}</finalName>
               <relocations>
                 <relocation>
-                  <pattern>org.bstats.bukkit</pattern>
-                  <shadedPattern>${plugin.package}</shadedPattern>
+                  <pattern>org.bstats</pattern>
+                  <shadedPattern>${plugin.package}.util.stats</shadedPattern>
                 </relocation>
               </relocations>
               <executions>
