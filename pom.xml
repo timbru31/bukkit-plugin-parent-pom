@@ -29,7 +29,7 @@
     <kotlin.version>1.4.32</kotlin.version>
     <lombok.version>1.18.20</lombok.version>
     <mockito.version>3.9.0</mockito.version>
-    <updater.version>4.2.1</updater.version>
+    <updater.version>4.2.2</updater.version>
 
     <!-- plugin versions -->
     <checkstyle.plugin.version>3.1.2</checkstyle.plugin.version>
