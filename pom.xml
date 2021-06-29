@@ -54,7 +54,7 @@
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
     <checkstyle.version>8.44</checkstyle.version>
     <pmd.location>https://dustplanet.de/pmd.xml</pmd.location>
-    <enforcer.maven.version>[3.2,)</enforcer.maven.version>
+    <enforcer.maven.version>[3.6,)</enforcer.maven.version>
 
     <!-- build configuration -->
     <src.dir>${basedir}/src/main/java</src.dir>
