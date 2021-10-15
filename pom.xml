@@ -23,7 +23,7 @@
     <spigot.version>1.17.1-R0.1-SNAPSHOT</spigot.version>
     <spotbugs.annotations.version>4.4.2</spotbugs.annotations.version>
     <hoverfly.version>0.14.1</hoverfly.version>
-    <junit.version>5.8.0</junit.version>
+    <junit.version>5.8.1</junit.version>
     <junit.extensions.version>2.5.0</junit.extensions.version>
     <junit.platform.version>1.8.1</junit.platform.version>
     <kotlin.version>1.5.31</kotlin.version>
