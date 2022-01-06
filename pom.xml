@@ -21,7 +21,7 @@
     <!-- dependency versions -->
     <bstats.version>2.2.1</bstats.version>
     <spigot.version>1.18.1-R0.1-SNAPSHOT</spigot.version>
-    <spotbugs.annotations.version>4.5.2</spotbugs.annotations.version>
+    <spotbugs.annotations.version>4.5.3</spotbugs.annotations.version>
     <hoverfly.version>0.14.1</hoverfly.version>
     <junit.version>5.8.2</junit.version>
     <junit.extensions.version>2.5.0</junit.extensions.version>
