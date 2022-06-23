@@ -20,7 +20,7 @@
 
     <!-- dependency versions -->
     <bstats.version>3.0.0</bstats.version>
-    <spigot.version>1.18.1-R0.1-SNAPSHOT</spigot.version>
+    <spigot.version>1.19-R0.1-SNAPSHOT</spigot.version>
     <spotbugs.annotations.version>4.7.0</spotbugs.annotations.version>
     <hoverfly.version>0.14.2</hoverfly.version>
     <junit.version>5.8.2</junit.version>
