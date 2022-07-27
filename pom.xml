@@ -43,7 +43,7 @@
     <jxr.version>3.2.0</jxr.version>
     <pmd.version>3.17.0</pmd.version>
     <release.version>2.5.3</release.version>
-    <resources.version>3.2.0</resources.version>
+    <resources.version>3.3.0</resources.version>
     <sb.contrib.version>7.4.7</sb.contrib.version>
     <shade.version>3.3.0</shade.version>
     <spotbugs.maven.version>4.7.1.1</spotbugs.maven.version>
