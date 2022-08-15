@@ -24,7 +24,7 @@
     <spotbugs.annotations.version>4.7.1</spotbugs.annotations.version>
     <hoverfly.version>0.14.2</hoverfly.version>
     <junit.version>5.8.2</junit.version>
-    <junit.extensions.version>2.5.0</junit.extensions.version>
+    <junit.extensions.version>2.6.0</junit.extensions.version>
     <junit.platform.version>1.8.2</junit.platform.version>
     <kotlin.version>1.7.10</kotlin.version>
     <lombok.version>1.18.24</lombok.version>
