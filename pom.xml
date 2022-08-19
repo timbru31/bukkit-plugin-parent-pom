@@ -40,7 +40,7 @@
     <findsecbugs.version>1.12.0</findsecbugs.version>
     <jar.version>3.2.2</jar.version>
     <javadoc.version>3.4.1</javadoc.version>
-    <jxr.version>3.2.0</jxr.version>
+    <jxr.version>3.3.0</jxr.version>
     <pmd.version>3.17.0</pmd.version>
     <release.version>2.5.3</release.version>
     <resources.version>3.3.0</resources.version>
