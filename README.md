@@ -57,7 +57,7 @@ Include the following in your `pom.xml`:
   <parent>
     <groupId>de.dustplanet</groupId>
     <artifactId>bukkit-plugin</artifactId>
-    <version>6.3.1</version>
+    <version>7.2.3</version>
     <relativePath />
   </parent>
 
