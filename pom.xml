@@ -338,6 +338,7 @@
                 <includes>
                   <include>org.bstats:*</include>
                   <include>org.mongodb:mongo-java-driver</include>
+                  <include>org.mongodb:mongodb-driver-sync</include>
                   <include>net.gravitydevelopment.updater:updater</include>
                   <include>com.vdurmont:semver4j</include>
                 </includes>
@@ -376,6 +377,7 @@
                 <includes>
                   <include>org.bstats:*</include>
                   <include>org.mongodb:mongo-java-driver</include>
+                  <include>org.mongodb:mongodb-driver-sync</include>
                 </includes>
               </artifactSet>
               <createDependencyReducedPom>false</createDependencyReducedPom>
@@ -438,6 +440,7 @@
                 <includes>
                   <include>org.bstats:*</include>
                   <include>org.mongodb:mongo-java-driver</include>
+                  <include>org.mongodb:mongodb-driver-sync</include>
                   <include>net.gravitydevelopment.updater:updater</include>
                   <include>com.vdurmont:semver4j</include>
                   <include>org.jetbrains:*:*</include>
@@ -504,6 +507,7 @@
                 <includes>
                   <include>org.bstats:*</include>
                   <include>org.mongodb:mongo-java-driver</include>
+                  <include>org.mongodb:mongodb-driver-sync</include>
                   <include>org.jetbrains:*:*</include>
                   <include>org.jetbrains.kotlin:kotlin-stdlib:jar:*</include>
                 </includes>
