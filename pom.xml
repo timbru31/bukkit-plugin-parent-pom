@@ -14,8 +14,8 @@
     <plugin.main>de.dustplanet.pluginMain</plugin.main>
     <plugin.package>de.dustplanet</plugin.package>
     <build.number>-b${BUILD_NUMBER}</build.number>
-    <jdk.version>1.8</jdk.version>
-    <java.version>1.8</java.version>
+    <jdk.version>17</jdk.version>
+    <java.version>18</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- dependency versions -->
@@ -54,7 +54,7 @@
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
     <checkstyle.version>8.45.1</checkstyle.version>
     <pmd.location>https://dustplanet.de/pmd.xml</pmd.location>
-    <enforcer.maven.version>[3.6,)</enforcer.maven.version>
+    <enforcer.maven.version>[3.9,)</enforcer.maven.version>
 
     <!-- build configuration -->
     <src.dir>${basedir}/src/main/java</src.dir>

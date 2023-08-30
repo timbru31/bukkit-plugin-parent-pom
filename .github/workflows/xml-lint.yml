@@ -1,13 +1,17 @@
 name: Run XML linting
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3.6.0
 
     - name: Run XML linting
       run: |
@@ -24,6 +28,6 @@ jobs:
 
     steps:
       - name: Automatically merge dependabot upgrades
-        uses: fastify/github-action-merge-dependabot@v3
+        uses: fastify/github-action-merge-dependabot@v3.9.1
         with:
           target: minor
