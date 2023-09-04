@@ -278,6 +278,17 @@
           </plugins>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${pmd.version}</version>
+        <configuration>
+          <targetJdk>${jdk.version}</targetJdk>
+          <rulesets>
+            <ruleset>${pmd.location}</ruleset>
+          </rulesets>
+        </configuration>
+      </plugin>
     </plugins>
     <resources>
       <resource>
@@ -309,17 +320,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
         <version>${jxr.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-        <version>${pmd.version}</version>
-        <configuration>
-          <targetJdk>${jdk.version}</targetJdk>
-          <rulesets>
-            <ruleset>${pmd.location}</ruleset>
-          </rulesets>
-        </configuration>
       </plugin>
     </plugins>
   </reporting>
