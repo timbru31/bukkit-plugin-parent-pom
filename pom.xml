@@ -15,7 +15,7 @@
     <plugin.package>de.dustplanet</plugin.package>
     <build.number>-b${BUILD_NUMBER}</build.number>
     <jdk.version>17</jdk.version>
-    <java.version>18</java.version>
+    <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- dependency versions -->
