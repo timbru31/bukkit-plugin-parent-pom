@@ -22,7 +22,7 @@
     <bstats.version>3.0.2</bstats.version>
     <spigot.version>1.20.1-R0.1-SNAPSHOT</spigot.version>
     <spotbugs.annotations.version>4.7.3</spotbugs.annotations.version>
-    <hoverfly.version>0.14.4</hoverfly.version>
+    <hoverfly.version>0.15.0</hoverfly.version>
     <junit.version>5.9.3</junit.version>
     <junit.extensions.version>2.6.0</junit.extensions.version>
     <junit.platform.version>1.9.3</junit.platform.version>
