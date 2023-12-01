@@ -44,7 +44,7 @@
     <pmd.version>3.21.2</pmd.version>
     <release.version>3.0.1</release.version>
     <resources.version>3.3.1</resources.version>
-    <sb.contrib.version>7.6.1</sb.contrib.version>
+    <sb.contrib.version>7.6.2</sb.contrib.version>
     <shade.version>3.5.1</shade.version>
     <spotbugs.maven.version>4.8.1.0</spotbugs.maven.version>
     <surefire.version>3.2.2</surefire.version>
