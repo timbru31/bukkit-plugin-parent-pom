@@ -27,7 +27,7 @@
     <junit.extensions.version>2.6.0</junit.extensions.version>
     <junit.platform.version>1.9.3</junit.platform.version>
     <kotlin.version>1.8.22</kotlin.version>
-    <lombok.version>1.18.30</lombok.version>
+    <lombok.version>1.18.32</lombok.version>
     <mockito.version>5.11.0</mockito.version>
     <updater.version>4.2.4</updater.version>
 
