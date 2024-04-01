@@ -52,7 +52,7 @@
 
     <!-- plugin configuration -->
     <checkstyle.location>https://dustplanet.de/checkstyle.xml</checkstyle.location>
-    <checkstyle.version>8.45.1</checkstyle.version>
+    <checkstyle.version>10.15.0</checkstyle.version>
     <pmd.location>https://dustplanet.de/pmd.xml</pmd.location>
     <enforcer.maven.version>[3.9,)</enforcer.maven.version>
 
