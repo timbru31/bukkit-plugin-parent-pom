@@ -10,7 +10,7 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 
 ### Dependencies
 
-* Bukkit
+* Spigot API (Bukkit)
 * bStats
 * Kotlin
 * Lombok
@@ -28,7 +28,8 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 
 ### Profiles
 
-* metrics - this profile shades bStats into the plugin
+* metrics - this profile shades bStats **and** the auto updater into the plugin
+* metrics-no-updater - this profile shades bStats into the plugin
 * kotlin - this profile adds the necessary configuration and shading for Kotlin usage
 
 ## Configuration
@@ -41,7 +42,7 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 
 ### Optional
 
-* Bukkit Version (*bukkit.version*), default will stick to the latest available one.
+* Spigot API (Bukkit) Version (*bukkit.version*), default will stick to the latest available one.
 * JDK Version (*jdk.version*), default is *21*
 * Enforced Maven version (*enforcer.maven.version*), default is *[3,9)*
 * Checkstyle ruleset (*checkstyle.location*), default is *https://dustplanet.de/checkstyle.xml*
@@ -57,7 +58,7 @@ Include the following in your `pom.xml`:
   <parent>
     <groupId>de.dustplanet</groupId>
     <artifactId>bukkit-plugin</artifactId>
-    <version>8.0.0</version>
+    <version>9.0.0</version>
     <relativePath />
   </parent>
 
