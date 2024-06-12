@@ -42,7 +42,7 @@ A maven parent POM for all my Bukkit/Spigot plugins.
 ### Optional
 
 * Bukkit Version (*bukkit.version*), default will stick to the latest available one.
-* JDK Version (*jdk.version*), default is *17*
+* JDK Version (*jdk.version*), default is *21*
 * Enforced Maven version (*enforcer.maven.version*), default is *[3,9)*
 * Checkstyle ruleset (*checkstyle.location*), default is *https://dustplanet.de/checkstyle.xml*
 * PMD ruleset (*pmd.location*), default is *https://dustplanet.de/pmd.xml*
