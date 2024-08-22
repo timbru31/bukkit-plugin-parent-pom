@@ -32,7 +32,7 @@
     <updater.version>4.2.4</updater.version>
 
     <!-- plugin versions -->
-    <checkstyle.plugin.version>3.4.0</checkstyle.plugin.version>
+    <checkstyle.plugin.version>3.5.0</checkstyle.plugin.version>
     <clean.version>3.4.0</clean.version>
     <compiler.version>3.13.0</compiler.version>
     <deploy.version>3.1.3</deploy.version>
