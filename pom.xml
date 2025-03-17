@@ -28,7 +28,7 @@
     <junit.platform.version>1.12.1</junit.platform.version>
     <kotlin.version>2.1.10</kotlin.version>
     <lombok.version>1.18.36</lombok.version>
-    <mockito.version>5.16.0</mockito.version>
+    <mockito.version>5.16.1</mockito.version>
     <updater.version>4.2.4</updater.version>
 
     <!-- plugin versions -->
