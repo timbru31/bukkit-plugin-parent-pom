@@ -39,7 +39,7 @@
     <enforcer.version>3.6.1</enforcer.version>
     <findsecbugs.version>1.14.0</findsecbugs.version>
     <jar.version>3.4.2</jar.version>
-    <javadoc.version>3.11.2</javadoc.version>
+    <javadoc.version>3.11.3</javadoc.version>
     <jxr.version>3.6.0</jxr.version>
     <pmd.version>3.27.0</pmd.version>
     <release.version>3.1.1</release.version>
