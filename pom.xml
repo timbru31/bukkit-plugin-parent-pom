@@ -34,7 +34,7 @@
     <!-- plugin versions -->
     <checkstyle.plugin.version>3.6.0</checkstyle.plugin.version>
     <clean.version>3.5.0</clean.version>
-    <compiler.version>3.14.0</compiler.version>
+    <compiler.version>3.14.1</compiler.version>
     <deploy.version>3.1.4</deploy.version>
     <enforcer.version>3.6.1</enforcer.version>
     <findsecbugs.version>1.14.0</findsecbugs.version>
