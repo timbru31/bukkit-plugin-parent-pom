@@ -36,7 +36,7 @@
     <clean.version>3.5.0</clean.version>
     <compiler.version>3.16.0</compiler.version>
     <deploy.version>3.2.0</deploy.version>
-    <enforcer.version>3.6.3</enforcer.version>
+    <enforcer.version>3.7.0</enforcer.version>
     <findsecbugs.version>1.14.0</findsecbugs.version>
     <jar.version>3.5.1</jar.version>
     <javadoc.version>3.12.0</javadoc.version>
